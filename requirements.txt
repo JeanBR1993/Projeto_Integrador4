@@ -1,0 +1,20 @@
+# Python 3.12 (testado)
+# Versões exatas testadas em um ambiente limpo criado com: uv venv --python 3.12 .venv
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.18.1
+matplotlib==3.10.9   # 3.10: o seaborn 0.13.2 usa um parâmetro do boxplot depreciado no matplotlib 3.11
+seaborn==0.13.2
+lightgbm==4.7.0
+joblib==1.6.0
+threadpoolctl==3.7.0   # dependência do scikit-learn, fixada para reprodutibilidade
+ipykernel==7.3.0
+
+# Para executar os notebooks pela linha de comando (jupyter nbconvert --execute)
+nbconvert==7.17.1
+
+# Extras opcionais - NÃO são necessários para o MVP (SGD x LightGBM x MLP do scikit-learn):
+# torch             # rede neural em PyTorch, caso queira ir além do MLPClassifier
+# imbalanced-learn  # SMOTE e outras técnicas de reamostragem
+# shap              # explicação das previsões com valores SHAP
